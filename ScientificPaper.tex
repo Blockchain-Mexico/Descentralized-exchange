@@ -1,0 +1,582 @@
+\documentclass{article}
+
+
+\usepackage{arxiv}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{float}
+\usepackage{flafter} 
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{Plethora of descentralized exchanges }
+
+
+\author{
+  Adan M. Pablo\thanks{Use footnote for providing further
+    information about author (webpage, alternative
+    address)---\emph{not} for acknowledging funding agencies.} \\
+  Department of Computer Science\\
+ UNAM\\\texttt{pabloadd@gmail.com} \\
+  %% examples of more authors
+   \And
+\\
+\\
+%% \AND
+  %% Coauthor \\
+  %% Affiliation \\
+  %% Address \\
+  %% \texttt{email} \\
+  %% \And
+  %% Coauthor \\
+  %% Affiliation \\
+  %% Address \\
+  %% \texttt{email} \\
+  %% \And
+  %% Coauthor \\
+  %% Affiliation \\
+  %% Address \\
+  %% \texttt{email} \\
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Desentralized excahnge(DEX) are possible for the permisionless smart contract plataforms with the promise of not-hacking and stolen funds but the principal trade off is the slow velocity compare with centralized exchange.we show a new descentralized exhcange that have..
+
+\end{abstract}
+
+
+% keywords can be removed
+\keywords{Descentralized Exchange \and blockchain \and cryptocurrency  \and Fintech}
+
+
+\section{Introduction}
+
+A descentralized market model and the fundaments are defined in \cite{10.1257/aer.20140759}. In Dapp popularity for categories exchanges are the type that use more transactions (13,708,713 transactions (45.9 porcentage of the total))  and more users.\cite{wu2019look} compare with other Dapps categories (Games, Gambing, Insurance, etc..).The research in design of exchanges \cite{8751454}.\cite{gao2019private}.The smart contract has a differents attacks,vulnerabilities and bugs. \cite{10.1007/978-3-662-54455-6_8}\cite{Wang:2019:DNP:3366395.3360615}\cite{tsankov2018securify} usually no patching after release.The first  architeture of the model were\cite{cryptoeprint:2014:1005}\cite{gerhardt2012homomorphic} that make the first properties of the system as overview of interaction between entities in the decentralized exchange and "pay-to-Contract protocol", diagrammatic representation of execution order transaction, diagrammatic representation of  withdrawal Transaction, fuctions of the exchanges and three type of entities (i.e. Issuer, Trader [User] and Miner).Many decentralized exchange platforms using Ethereum
+Virtual Machine (EVM) smart-contracts or other virtual machine with smart contract behaivor rely upon either
+doing things directly on-chain (which forces everything on the Ethereum network and does
+not permit cross-blockchain activity), or they do things off-chain without a single execution
+engine.\cite{Poon2017OmiseGODE}. Due the EVM smart-contract doesn´t have a good gast cost in binary field operations\cite{yang2019empirically} the On-chain book orders is out of the main chain\cite{cryptoeprint:2019:360}.Alternatives are zk-STARK \cite{DBLP:journals/iacr/Ben-SassonBHR18}that show a . The first DEx with a lot of user is 0x \cite{0x} introduces a "modular trade network" that provides diferents relayers. The problems caused by blockchain include 1) Long confirmation time,
+2) Vulnerable to front running attack\cite{DBLP:journals/corr/abs-1902-05164}, 3) wasting on-chain resource\cite{inproceedings2}, all these problems make a blockchain based
+exchange not user friendly\cite{Malinova2016MarketDF}\cite{DBLP:journals/corr/abs-1904-05234}. A Hybrid Centralized and Decentralized
+Application (HCDAPP) provides a better-quality service, just like a centralized server; at the same time, it also
+provides a higher-level security, like a decentralized smart contract. DEX differs from traditional Centralized exchange (CEX)
+mainly in that DEX enabling users to remain in control of their
+funds by operating their critical functions on the blockchain. In
+other words, DEX leverages the technology advantages behind cryptocurrencies themselves to enable a safer and more
+transparent trading. \cite{8606010}.Distributed exchanges can mitigate the negative consequences of the
+high-frequency trading arms race. On decentralized exchanges, HFTs acquire speed in real time, on
+an as-needed basis, whereas centralized exchanges provision excess capacity to these accommodate
+“trading micro-bursts,” following trading signals. By its nature, a distributed exchange eliminates
+the negative externality associated with maintaining idle capacity that occurs, for example, with
+co-location at centralized exchanges. We find that decentralized exchanges encourage short-lived,
+though intense, HFT races.\cite{brolley2019liquid}
+
+
+
+
+\section{Comparsion of exchanges}
+In the desing of truly decentralized excahnges are generally vulnerbable to front-running attacks following a displacement or insertion template, where the order book is implemented on-chain.
+Exchanges such as EtherDelta implement their order books are stored on a central
+server they control and shown to their users with a website interface.0xProtocol uses Relayers which act as the
+order book holders and could front-run the orders they relay.Due to the cost of executing every settlement on chain, a DEX cannot settle more than 3 trades/second (even if it were to consume all gas). With StarkDEX, DEXes can settle over 8,000 trades per Ethereum block, or 550 trades per second, an almost 200X improvement over Ethereum’s current peak capacity.0x
+Bancor\cite{Bancor}, Hydro Protocol, Switcheo, Loopring, REN, StarkWare, Band Protocol.
+\label{sec:headings}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[]
+\centering\renewcommand{\arraystretch}{1.2}
+ \caption{Comparison of DEX and CX}
+  \centering
+\resizebox{.8\textwidth}{!}{%
+\begin{tabular}{@{}|l|l|l|l|l|l|@{}}
+\toprule
+Aplicattion & Liquidity & Scale & \begin{tabular}[c]{@{}l@{}}Privacy \\ from 3rd\\ Parties\end{tabular} & SC-Trading & \begin{tabular}[c]{@{}l@{}}Trust in \\ Central\\ Entity\end{tabular} \\ \midrule
+DEX         & Low       & Low   & No                                                                    & Yes        & Less                                                                 \\ \midrule
+CX          & High      & High  & Yes                                                                   & No         & More                                                                 \\ \bottomrule
+\end{tabular}%
+}
+\end{table}
+%
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[!hbt]
+  \centering\renewcommand{\arraystretch}{1.2}
+ \caption{Crypto losses in centralized exchange (CX)}
+  \centering
+\begin{tabular}{@{}llll@{}}
+\toprule
+Year & Exchange(s) Affected                         & Type             & Crypto Amount           \\ \midrule
+2013 & SILK ROAD                                    & Marketplace Hack & 171,955 BTC             \\
+2014 & MT GOX, CRYPTSY, MINTPAL                     & Exchange Hack    & 866,894 BTC,300,000 LTC \\
+2015 & BITSTAMP, BTER                               & Exchange Hack    & 26,000 BTC              \\
+2016 & BITFINEX                                     & Exchange Hack    & 120,000 BTC             \\
+2018 & COINCHECK, BITGRAIL, COINRAIL, ZAIF, BITHUMB & Exchange Hack    & 523,000,000 NEM         \\
+2018 & MAPLE CHANGE, COINSECURE, PUREBIT            & Exit Scam        & 1,351 BTC               \\
+2019 & CRYPTOPIA (2X), BINANCE, BITHUMB, GATEHUB    & Exchange Hack    & 21,065 ETH              \\
+2019 & UpBit                                        & Exchange Hack    & 250,000 ETH             \\ \bottomrule
+\end{tabular}
+\end{table}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[]
+ \caption{DEX with centralized  vulnerability}
+  \centering
+\resizebox{.6\textwidth}{!}{%
+\begin{tabular}{@{}ll@{}}
+\toprule
+DEX Name    & Centralized Vulnerability                                                                            \\ \midrule
+0x          & Hosted Relayers                                                                                      \\
+AIRSWAP     & \begin{tabular}[c]{@{}l@{}}Off-Chain\\ Order Books,Indexers\end{tabular}                             \\
+BISQ        & \begin{tabular}[c]{@{}l@{}}Reliant on\\ Centralized Fiat Providers,Arbitrators\end{tabular}          \\
+DECRED DEX  & \begin{tabular}[c]{@{}l@{}}Client-Server\\ Architecture (Off-chain order,book)\end{tabular}          \\
+ETHERDELTA  & \begin{tabular}[c]{@{}l@{}}Off-Chain\\ Order Book Hosted Relayers,Only Ethereum (ERC-20\end{tabular} \\
+ETHFINEX    & Off-Chain,Order Books,Centralized,Administration                                                     \\
+IDEX        & Off-Chain Order Books                                                                                \\
+NEO DEX     & Validators                                                                                           \\
+OASIS DEX   & Only Ethereum (ERC-20)                                                                               \\
+RADAR RELAY & \begin{tabular}[c]{@{}l@{}}Off-Chain\\ Order Books,Hosted Relayers\end{tabular}                      \\
+SPARKSWAP   & Lightning Network                                                                                    \\
+STELLAR DEX & \begin{tabular}[c]{@{}l@{}}Representational\\ Assets.,Validators\end{tabular}                        \\
+WAVES DEX   & Validators                                                                                           \\ \bottomrule
+\end{tabular}%
+}
+\end{table}
+
+
+\subsubsection{Headings: third level}
+\lipsum[6]
+
+\paragraph{Paragraph}
+\lipsum[7]
+
+\section{Design aproach in  Trusted Exchange Based-on Blockchain}
+\label{sec:others}
+Low Contract Footprint Pattern
+
+\begin{lstlisting}
++-----------------+
+| Front end       |
++-----------------+
+| Back end        |
++-----------------+
+| Smart Contracts |
++-----------------+
+\end{lstlisting}
+\begin{figure}
+\centering\includegraphics[width=0.8\textwidth]{Fig/layer.png} 
+  \caption{Sample figure caption.}
+\label{fig:fourchamber}\end{figure} 
+\begin{figure}
+\centering\includegraphics[width=0.8\textwidth]{Fig/current.png} 
+  \caption{Sample figure caption.}
+\label{fig:fourchamber}\end{figure} 
+\begin{figure}
+\centering\includegraphics[width=0.8\textwidth]{Fig/proposer.png} 
+  \caption{Sample figure caption.}
+\label{fig:fourchamber}\end{figure} 
+\begin{figure}
+\centering\includegraphics[width=0.8\textwidth]{Fig/a2.png} 
+  \caption{Sample figure caption.}
+\label{fig:fourchamber}\end{figure} 
+\begin{figure}
+\centering\includegraphics[width=0.8\textwidth]{Fig/a.png} 
+  \caption{Sample figure caption.}
+\label{fig:fourchamber}\end{figure} 
+\begin{figure}
+\centering\includegraphics[width=0.8\textwidth]{Fig/lending.png} 
+  \caption{Sample figure caption.}
+\label{fig:fourchamber}\end{figure} 
+
+
+\begin{center}
+  \url{https://www.ctan.org/pkg/booktabs}
+\end{center}
+
+
+\subsection{Figures}
+\lipsum[10] 
+See Figure \ref{fig:fig1}. Here is how you add footnotes. \footnote{Sample of the first footnote.}
+\lipsum[11] 
+
+
+\subsection{Tables}
+\lipsum[12]
+See awesome Table~\ref{tab:table}.
+
+
+
+\subsection{Lists}
+\begin{itemize}
+\item Lorem ipsum dolor sit amet
+\item consectetur adipiscing elit. 
+\item Aliquam dignissim blandit est, in dictum tortor gravida eget. In ac rutrum magna.
+\end{itemize}
+
+\begin{lstlisting}
+message Order {
+address protocol;
+address owner;
+address tokenS;
+address tokenB;
+uint256 amountS;
+uint256 amountB;
+unit256 lrcFee
+unit256 validSince; // Seconds since epoch
+unit256 validUntil; // Seconds since epoch
+uint8 marginSplitPercentage; // [1-100]
+bool buyNoMoreThanAmountB;
+uint256 walletId;
+// Dual-Authoring address
+address authAddr;
+// v, r, s are parts of the signature
+uint8 v;
+bytes32 r;
+bytes32 s;
+// Dual-Authoring private-key,
+// not used for calculating order’s hash,
+// thus it is NOT signed.
+string authKey;
+uint256 nonce;
+}
+\end{lstlisting}
+\begin{lstlisting}
+using Neo.SmartContract.Framework;
+using Neo.VM;
+using System;
+using System.Numerics;
+
+namespace switcheo
+{
+    public struct BalanceChange
+    {
+        public byte[] AssetID;
+        public BigInteger Amount;
+        public byte[] ReasonCode;
+    }
+
+    public static class BalanceEngineHelpers
+    {
+        [OpCode(OpCode.APPEND)]
+        public extern static void Append(BalanceChange[] array, BalanceChange item);
+
+        public static Map<byte[], BalanceChange[]> IncreaseBalance(this Map<byte[], BalanceChange[]> balanceChanges, byte[] address, byte[] assetID, BigInteger amount, byte[] reason)
+        {
+            return ChangeBalance(balanceChanges, address, assetID, amount, reason);
+        }
+
+        public static Map<byte[], BalanceChange[]> ReduceBalance(this Map<byte[], BalanceChange[]> balanceChanges, byte[] address, byte[] assetID, BigInteger amount, byte[] reason)
+        {
+            return ChangeBalance(balanceChanges, address, assetID, 0 - amount, reason);
+        }
+
+        private static Map<byte[], BalanceChange[]> ChangeBalance(this Map<byte[], BalanceChange[]> balanceChanges, byte[] address, byte[] assetID, BigInteger amount, byte[] reason)
+        {
+            BalanceChange balanceChange = new BalanceChange
+            {
+                AssetID = assetID,
+                Amount = amount,
+                ReasonCode = reason
+            };
+            if (balanceChanges.HasKey(address))
+            {
+                Append(balanceChanges[address], balanceChange);
+            }
+            else
+            {
+                // create new array if its a new address
+                balanceChanges[address] = new BalanceChange[] { balanceChange };
+            }
+            return balanceChanges;
+        }
+    }
+}
+\end{lstlisting}
+\begin{lstlisting}
+
+pragma solidity 0.4.19;
+
+import "./IToken.sol";
+import "./LSafeMath.sol";
+
+/**
+ * @title ForkDelta
+ * @dev This is the main contract for the ForkDelta exchange.
+ */
+contract ForkDelta {
+  
+  using LSafeMath for uint;
+
+  /// Variables
+  address public admin; // the admin address
+  address public feeAccount; // the account that will receive fees
+  uint public feeTake; // percentage times (1 ether)
+  uint public freeUntilDate; // date in UNIX timestamp that trades will be free until
+  bool private depositingTokenFlag; // True when Token.transferFrom is being called from depositToken
+  mapping (address => mapping (address => uint)) public tokens; // mapping of token addresses to mapping of account balances (token=0 means Ether)
+  mapping (address => mapping (bytes32 => bool)) public orders; // mapping of user accounts to mapping of order hashes to booleans (true = submitted by user, equivalent to offchain signature)
+  mapping (address => mapping (bytes32 => uint)) public orderFills; // mapping of user accounts to mapping of order hashes to uints (amount of order that has been filled)
+  address public predecessor; // Address of the previous version of this contract. If address(0), this is the first version
+  address public successor; // Address of the next version of this contract. If address(0), this is the most up to date version.
+  uint16 public version; // This is the version # of the contract
+
+  /// Logging Events
+  event Order(address tokenGet, uint amountGet, address tokenGive, uint amountGive, uint expires, uint nonce, address user);
+  event Cancel(address tokenGet, uint amountGet, address tokenGive, uint amountGive, uint expires, uint nonce, address user, uint8 v, bytes32 r, bytes32 s);
+  event Trade(address tokenGet, uint amountGet, address tokenGive, uint amountGive, address get, address give);
+  event Deposit(address token, address user, uint amount, uint balance);
+  event Withdraw(address token, address user, uint amount, uint balance);
+  event FundsMigrated(address user, address newContract);
+
+  /// This is a modifier for functions to check if the sending user address is the same as the admin user address.
+  modifier isAdmin() {
+      require(msg.sender == admin);
+      _;
+  }
+
+  /// Constructor function. This is only called on contract creation.
+  function ForkDelta(address admin_, address feeAccount_, uint feeTake_, uint freeUntilDate_, address predecessor_) public {
+    admin = admin_;
+    feeAccount = feeAccount_;
+    feeTake = feeTake_;
+    freeUntilDate = freeUntilDate_;
+    depositingTokenFlag = false;
+    predecessor = predecessor_;
+    
+    if (predecessor != address(0)) {
+      version = ForkDelta(predecessor).version() + 1;
+    } else {
+      version = 1;
+    }
+  }
+
+\end{lstlisting}
+\begin{lstlisting}
+/*
+  Copyright 2019 ZeroEx Intl & StarkWare Industries.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  The laws and regulations applicable to the use and exchange of digital assets
+  and blockchain-native tokens, including through any software developed using the
+  licensed work created by ZeroEx Intl. and StarkWare Industries (the “Work”),
+  vary by jurisdiction.
+
+  As set forth in the Apache License, Version 2.0 applicable to the Work,
+  developers are “solely responsible for determining the appropriateness of using
+  or redistributing the Work,” which includes responsibility for ensuring
+  compliance with any such applicable laws and regulations.
+
+  See the Apache License, Version 2.0 for the specific language governing all
+  applicable permissions and limitations.
+*/
+
+pragma solidity ^0.5.2;
+
+import "LibConstants.sol";
+import "LibErrors.sol";
+import "MGovernance.sol";
+import "MFreezable.sol";
+import "MVerifiers.sol";
+
+/*
+  Implements MVerifiers.
+*/
+contract Verifiers is LibErrors, MGovernance, MFreezable, MVerifiers {
+    // True if and only if the address is of an approved verifier.
+    mapping (address => bool) private verifiers;
+
+    modifier onlyVerifiers()
+    {
+        require(verifiers[msg.sender], ONLY_VERIFIERS);
+        _;
+    }
+
+    function isVerifier(address verifierAddress)
+        external view
+        returns (bool addressIsVerifier)
+    {
+        addressIsVerifier = verifiers[verifierAddress];
+    }
+
+    function registerVerifier(address verifier)
+        external
+        onlyGovernance()
+        notFrozen()
+    {
+        // TODO: In the future, this function will have a mechanism of time locking
+        // that will require a certain period of time to pass before it starts
+        // using the new verifier.
+        require(verifiers[verifier] == false, VERIFIER_ALREADY_REGISTERED);
+        verifiers[verifier] = true;
+    }
+
+    function unregisterVerifier(address verifier)
+        external
+        onlyGovernance()
+        notFrozen()
+    {
+        require(verifiers[verifier] == true, VERIFIER_NOT_REGISTERED);
+        verifiers[verifier] = false;
+    }
+}
+
+\end{lstlisting}
+\begin{lstlisting}
+*
+  Copyright 2019 StarkWare Industries Ltd.
+
+  Licensed under the Apache License, Version 2.0 (the "License").
+  You may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  https://www.starkware.co/open-source-license/
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions
+  and limitations under the License.
+*/
+
+pragma solidity ^0.5.2;
+
+import "StarkVerifier.sol";
+import "StarkParameters.sol";
+import "PublicInputOffsets.sol";
+import "DexConstraintPoly.sol";
+
+contract PeriodicColumnContract {
+    function compute(uint256 x) external pure returns(uint256 result);
+}
+
+contract DexVerifier is StarkParameters, StarkVerifier, PublicInputOffsets {
+    DexConstraintPoly constraintPoly;
+    PeriodicColumnContract hashPointsX;
+    PeriodicColumnContract hashPointsY;
+    PeriodicColumnContract ecdsaPointsX;
+    PeriodicColumnContract ecdsaPointsY;
+
+    constructor(address[] memory auxPolynomials, address oodsContract)
+        public {
+        constraintPoly = DexConstraintPoly(auxPolynomials[0]);
+        hashPointsX = PeriodicColumnContract(auxPolynomials[1]);
+        hashPointsY = PeriodicColumnContract(auxPolynomials[2]);
+        ecdsaPointsX = PeriodicColumnContract(auxPolynomials[3]);
+        ecdsaPointsY = PeriodicColumnContract(auxPolynomials[4]);
+        oodsContractAddress = oodsContract;
+    }
+
+    function getNColumnsInTrace() internal pure returns(uint256) {
+        return N_COLUMNS_IN_MASK;
+    }
+
+    function getNColumnsInComposition() internal pure returns(uint256) {
+        return CONSTRAINTS_DEGREE_BOUND;
+    }
+
+    function getMmCoefficients() internal pure returns(uint256) {
+        return MM_COEFFICIENTS;
+    }
+
+    function getMmOodsValues() internal pure returns(uint256) {
+        return MM_OODS_VALUES;
+    }
+
+    function getMmOodsCoefficients() internal pure returns(uint256) {
+        return MM_OODS_COEFFICIENTS;
+    }
+
+    function getNCoefficients() internal pure returns(uint256) {
+        return N_COEFFICIENTS;
+    }
+
+    function getNOodsValues() internal pure returns(uint256) {
+        return N_OODS_VALUES;
+    }
+
+    function getNOodsCoefficients() internal pure returns(uint256) {
+        return N_OODS_COEFFICIENTS;
+    }
+\end{lstlisting}
+
+IDEX smat contract:
+\hyperlink{https://etherscan.io/address/0x2a0c0dbecc7e4d658f48e01e3fa353f44050c208#code}{https://etherscan.io/address/0x2a0c0dbecc7e4d658f48e01e3fa353f44050c208#code}
+DDEX Margin smart contract: https://etherscan.io/address/0x241e82c79452f51fbfc89fac6d912e021db1a3b7
+Bancor buyer: https://etherscan.io/address/0x77a77eca75445841875ebb67a33d0a97dc34d924
+Kyber netowrk ProxyL: https://etherscan.io/address/0x818e6fecd516ecc3849daf6845e3ec868087b755#code
+Hydro protocol hybrid exchange: https://etherscan.io/address/0xe2a0bfe759e2a4444442da5064ec549616fff101
+Stark main contract(ropsten) https://ropsten.etherscan.io/address/0x87e9f70ddac7be198c1643f9423236902cd67769
+Stark Verifier contract(ropsten)https://ropsten.etherscan.io/address/0xdc3422c75a04e64c30b4cedac699239d48bfba35
+ERC20 Token
+ERC20 establishes a standard contract ABI for tokens on the Ethereum blockchain and has become the
+de facto representation for all types of digital assets. ERC20 tokens share the same contract interface,
+simplifying integration with external contracts.
+Core ERC20 functions include:
+• transfer(to, value)
+• balanceOf(owner)
+• approve(spender, value)
+• allowance(owner, spender)
+• transferFrom(from, to, value)
+EIP101 includes a proposal to change ether to follow the ERC20 token standard. For now, a “wrapper”
+smart contract may be used as a proxy for ERC20 ether. For reference, see the Maker implementation
+or the Gnosis implementation.
+7.2 Contract ABI
+EIP50 proposes an extension to the contract ABI to support structs. This would allow the community to establish standard Order and Signature data structures, simplifying our contract interface and
+integrations with external contracts.
+7.3 Ethereum Name Service
+EIP137 or Ethereum Name Service (ENS) will be used to resolve human-readable names, such as “myname.eth,” into machine-readable identifiers that may represent Ethereum addresses, Swarm and/or
+IPFS content hashes or other identifiers. It can also be used to associate metadata with names, such as
+contract ABIs or whois information. ENS will be used by 0x protocol to create more intuitive message
+formats that optionally reference Makers, Takers and Relayers by name
+\bibliographystyle{plain}
+\bibliography{references.bib}
+
+\end{document}
